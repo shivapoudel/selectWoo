@@ -167,7 +167,6 @@ define([
 
     var parentOffset = $offsetParent.offset();
 
-    css.top -= parentOffset.top;
     css.left -= parentOffset.left;
 
     if (!isCurrentlyAbove && !isCurrentlyBelow) {
@@ -182,7 +181,7 @@ define([
 
     if (newDirection == 'above' ||
       (isCurrentlyAbove && newDirection !== 'below')) {
-      css.top = container.top - parentOffset.top - dropdown.height;
+      css.top = container.top - dropdown.height;
     }
 
     if (newDirection != null) {
